@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivityPizza">
+
+    <ImageView
+        android:id="@+id/bg_img"
+        android:layout_width="351dp"
+        android:layout_height="185dp"
+        android:layout_marginTop="4dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/pizza_img" />
+
+    <RadioButton
+        android:id="@+id/small_rb"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="8dp"
+        android:text="Small"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView"
+        android:onClick="onRadioButtonClicked" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="Choose your pizza size"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.078"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/bg_img" />
+
+    <RadioButton
+        android:id="@+id/large_rb"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="9dp"
+        android:layout_marginEnd="44dp"
+        android:layout_marginRight="44dp"
+        android:text="Large"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView"
+        android:onClick="onRadioButtonClicked"/>
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:text="Choose your toppings"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.076"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/small_rb" />
+
+    <CheckBox
+        android:id="@+id/onion_cb"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:text="Onion"
+        app:layout_constraintTop_toBottomOf="@+id/textView2"
+        tools:layout_editor_absoluteX="16dp"
+        android:onClick="onCheckBoxClicked"/>
+
+    <CheckBox
+        android:id="@+id/olives_cb"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="olives"
+        app:layout_constraintTop_toBottomOf="@+id/onion_cb"
+        tools:layout_editor_absoluteX="16dp"
+        android:onClick="onCheckBoxClicked"/>
+
+    <CheckBox
+        android:id="@+id/tomatos_cb"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Tomatos"
+        app:layout_constraintTop_toBottomOf="@+id/olives_cb"
+        tools:layout_editor_absoluteX="16dp"
+        android:onClick="onCheckBoxClicked"/>
+
+    <RadioButton
+        android:id="@+id/medium_rb"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="48dp"
+        android:text="Medium"
+        app:layout_constraintEnd_toStartOf="@+id/large_rb"
+        app:layout_constraintHorizontal_bias="0.403"
+        app:layout_constraintStart_toEndOf="@+id/small_rb"
+        app:layout_constraintTop_toBottomOf="@+id/bg_img"
+        android:onClick="onRadioButtonClicked"/>
+
+    <Button
+        android:id="@+id/order_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="Place your order"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tomatos_cb"
+        app:layout_constraintVertical_bias="0.137"
+        tools:layout_editor_absoluteX="115dp" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="447dp"
+        android:layout_height="66dp"
+        android:background="#D7474141"
+        android:fontFamily="sans-serif-black"
+        android:text="Android Pizza Shop"
+        android:textColor="#B61515"
+        android:textSize="36sp"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:layout_editor_absoluteX="-2dp" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
